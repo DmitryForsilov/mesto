@@ -1,0 +1,8 @@
+@import url(./_type/user-info__button_type_popup-card-open.css);
+@import url(./_type/user-info__button_type_popup-info-open.css);
+
+.user-info__button:hover {
+  background-color: #fff;
+  color: #000;
+  transition: ease .4s;
+}

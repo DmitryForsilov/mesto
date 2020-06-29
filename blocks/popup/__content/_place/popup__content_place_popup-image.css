@@ -1,0 +1,10 @@
+.popup__content.popup__content_place_popup-image {
+  width: auto;
+  min-height: auto;
+  background-color: #fff;
+  border-radius: 0;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+}
