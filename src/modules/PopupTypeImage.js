@@ -1,3 +1,4 @@
+import Popup from './Popup.js';
 
 class PopupTypeImage extends Popup {
   constructor(container) {
@@ -24,3 +25,5 @@ class PopupTypeImage extends Popup {
     this._removeImage();
   }
 }
+
+export default PopupTypeImage;

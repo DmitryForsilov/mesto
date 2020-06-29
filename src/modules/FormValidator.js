@@ -1,10 +1,9 @@
-
 class FormValidator {
-  constructor(formElement, errors) {
+  constructor(formElement, inputErrors) {
     this._formElement = formElement;
     this._submitButton = formElement.elements.submit;
     this._errorElements = this._formElement.querySelectorAll('.popup__error-message');
-    this._erorrs = errors;
+    this._inputErorrs = inputErrors;
 
     this._setEventListeners();
   }
@@ -17,17 +16,17 @@ class FormValidator {
     const validityState = inputElement.validity;
 
     if (validityState.typeMismatch) {
-      errorElement.textContent = this._erorrs[inputElement.type];
+      errorElement.textContent = this._inputErorrs[inputElement.type];
 
       return false;
     }
     if (validityState.valueMissing) {
-      errorElement.textContent = this._erorrs.requiredField;
+      errorElement.textContent = this._inputErorrs.requiredField;
 
       return false;
     }
     if (validityState.tooShort || validityState.tooLong) {
-      errorElement.textContent = this._erorrs.shortOrLong;
+      errorElement.textContent = this._inputErorrs.shortOrLong;
 
       return false;
     }
@@ -79,3 +78,5 @@ class FormValidator {
     this._formElement.addEventListener('input', this.boundValidateHandler);
   }
 }
+
+export default FormValidator;

@@ -1,4 +1,3 @@
-
 class CardList {
   constructor(container) {
     this._container = container;
@@ -12,3 +11,5 @@ class CardList {
     initialCards.forEach((cardElement) => this.addCard(cardElement));
   }
 }
+
+export default CardList;

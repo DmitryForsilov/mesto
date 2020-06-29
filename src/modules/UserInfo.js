@@ -1,4 +1,3 @@
-
 class UserInfo {
   constructor(userNameElement, userAboutElement, userAvatarElement) {
     this._userNameElement = userNameElement;
@@ -28,3 +27,5 @@ class UserInfo {
     this._userAvatarElement.style.backgroundImage = `url(${this._avatarLink})`;
   }
 }
+
+export default UserInfo;

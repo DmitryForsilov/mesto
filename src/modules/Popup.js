@@ -1,4 +1,3 @@
-
 class Popup {
   constructor(container) {
     this._container = container;
@@ -30,3 +29,5 @@ class Popup {
     });
   }
 }
+
+export default Popup;

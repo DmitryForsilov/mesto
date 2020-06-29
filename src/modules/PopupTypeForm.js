@@ -1,3 +1,4 @@
+import Popup from './Popup.js';
 
 class PopupTypeForm extends Popup {
   constructor(container, resetFormCb) {
@@ -11,3 +12,5 @@ class PopupTypeForm extends Popup {
     this._resetFormCb();
   }
 }
+
+export default PopupTypeForm;
