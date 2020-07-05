@@ -6,6 +6,8 @@ import PopupTypeForm from './modules/PopupTypeForm.js';
 import PopupTypeImage from './modules/PopupTypeImage.js';
 import UserInfo from './modules/UserInfo.js';
 
+import './index.css';
+
 const runApp = () => {
   const state = {
     userData: {},
