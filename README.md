@@ -2,7 +2,7 @@
 
 [Ссылка на проект](https://dmitryforsilov.github.io/Mesto)
 
-Сборка проекта реализована через Webpack.
+## Сборка проекта реализована через Webpack.
 
 - Три типа сборки: dev, build и deploy.
 - JS код транспилируется через Babel.
