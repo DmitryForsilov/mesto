@@ -1,4 +1,3 @@
-
 class Card {
   constructor(cardData, userId, removeCardCb, likeCardCb, openPopupImageCb) {
     this._cardData = cardData;
@@ -88,3 +87,5 @@ class Card {
     this._popupOpenElement.removeEventListener('click', this._boundOpenPopupHandler);
   }
 }
+
+export default Card;

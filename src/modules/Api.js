@@ -1,4 +1,3 @@
-
 class Api {
   constructor(config) {
     this._baseUrl = config.baseUrl;
@@ -84,3 +83,5 @@ class Api {
     });
   }
 }
+
+export default Api;

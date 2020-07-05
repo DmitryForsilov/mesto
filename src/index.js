@@ -1,3 +1,12 @@
+import Api from './modules/Api.js';
+import Card from './modules/Card.js';
+import CardList from './modules/CardList.js';
+import FormValidator from './modules/FormValidator.js';
+import PopupTypeForm from './modules/PopupTypeForm.js';
+import PopupTypeImage from './modules/PopupTypeImage.js';
+import UserInfo from './modules/UserInfo.js';
+
+import './index.css';
 
 const runApp = () => {
   const state = {
@@ -12,7 +21,7 @@ const runApp = () => {
     },
   };
 
-  const errors = {
+  const inputErrors = {
     url: 'Здесь должна быть ссылка',
     requiredField: 'Это обязательное поле',
     shortOrLong: 'Должно быть от 2 до 30 символов',
@@ -75,7 +84,11 @@ const runApp = () => {
 
   const makeCard = (cardData, userId, popupTypeImage, api) => {
     const card = new Card(
-      cardData, userId, makeRemoveCardCb(api), makeLikeCardCb(api), makeOpenPopupImageCb(popupTypeImage),
+      cardData,
+      userId,
+      makeRemoveCardCb(api),
+      makeLikeCardCb(api),
+      makeOpenPopupImageCb(popupTypeImage),
     );
 
     return card.create();
@@ -103,11 +116,12 @@ const runApp = () => {
   const cardList = new CardList(cardsContainer);
   const userInfo = new UserInfo(userNameElement, userAboutElement, userAvatarElement);
 
-  const popupCard = new PopupTypeForm(popupCardContainer, makeResetFormCb(cardForm, errors));
-  const popupInfo = new PopupTypeForm(popupInfoContainer, makeResetFormCb(infoForm, errors));
-  const popupAvatar = new PopupTypeForm(popupAvatarContainer, makeResetFormCb(avatarForm, errors));
+  const popupCard = new PopupTypeForm(popupCardContainer, makeResetFormCb(cardForm, inputErrors));
+  const popupInfo = new PopupTypeForm(popupInfoContainer, makeResetFormCb(infoForm, inputErrors));
+  const popupAvatar = new PopupTypeForm(
+    popupAvatarContainer, makeResetFormCb(avatarForm, inputErrors),
+  );
   const popupTypeImage = new PopupTypeImage(popupImageContainer);
-
 
   // Обработчики
   const cardFormSubmitHandler = (event) => {
