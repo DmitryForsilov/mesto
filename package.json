@@ -1,8 +1,8 @@
 {
   "name": "mesto",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "frontend project mesto",
+  "main": "src/index.js",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
     "build": "NODE_ENV=production rimraf dist && webpack --mode production",

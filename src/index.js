@@ -14,7 +14,9 @@ const runApp = () => {
   };
 
   const apiConfig = {
-    baseUrl: 'https://praktikum.tk/cohort11',
+    baseUrl: process.env.NODE_ENV === 'development'
+      ? 'http://praktikum.tk/cohort11'
+      : 'https://praktikum.tk/cohort11',
     headers: {
       authorization: '865d3e91-8ce0-4f86-8f6b-42dbb43992fc',
       'Content-Type': 'application/json',
