@@ -14,7 +14,8 @@ const runApp = () => {
   };
 
   const apiConfig = {
-    baseUrl: process.env.NODE_ENV === 'development'
+    // eslint-disable-next-line no-undef
+    baseUrl: NODE_ENV === 'development'
       ? 'http://praktikum.tk/cohort11'
       : 'https://praktikum.tk/cohort11',
     headers: {

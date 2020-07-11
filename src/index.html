@@ -10,7 +10,7 @@
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -44,7 +44,7 @@
     </div>
     <div class="popup popup_type_card">
       <div class="popup__content">
-        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" name="cardForm" novalidate>
           <div class="popup__input-container">
@@ -61,7 +61,7 @@
     </div>
     <div class="popup popup_type_info">
       <div class="popup__content">
-        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="infoForm" novalidate>
           <div class="popup__input-container">
@@ -78,13 +78,13 @@
     </div>
     <div class="popup popup_type_image">
       <div class="popup__content popup__content_place_popup-image">
-        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
         <img src="" alt="" class="popup__image">
       </div>
     </div>
     <div class="popup popup_type_avatar">
       <div class="popup__content">
-        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
         <h3 class="popup__title">Обновить аватар</h3>
         <form class="popup__form" name="avatarForm" novalidate>
           <div class="popup__input-container">

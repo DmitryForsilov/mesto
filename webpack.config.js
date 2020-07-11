@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
@@ -17,35 +18,59 @@ module.exports = {
       {
         test: /\.js$/i,
         exclude: /node_modules/,
-        use: { loader: 'babel-loader' },
+        use: {
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.css$/i,
         use: [
-          isDevelopmentEnvironment ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
+          {
+            loader: isDevelopmentEnvironment ? 'style-loader' : MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2, // Запуск этого лоадера после двух других
+            },
+          },
+          {
+            loader: 'postcss-loader',
+          },
         ],
       },
       {
         test: /\.(gif|png|jpe?g|svg|ico)$/i,
         use: [
-          'file-loader?name=./images/[name].[ext]',
+          {
+            loader: 'file-loader',
+            options: {
+              name: './images/[name].[ext]',
+              esModule: false, // Решение проблемы с [Object Module] вместо изображений
+            },
+          },
           {
             loader: 'image-webpack-loader',
-            options: {},
           },
         ],
       },
       {
         test: /\.(eot|ttf|woff2?)$/i,
-        loader: 'file-loader?name=./vendor/fonts/[name].[ext]',
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: './vendor/fonts/[name].[ext]',
+          },
+        },
       },
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+    }),
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css',
+      filename: '[name].[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,

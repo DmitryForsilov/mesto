@@ -4,9 +4,9 @@
   "description": "frontend project mesto",
   "main": "src/index.js",
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
-    "build": "NODE_ENV=production rimraf dist && webpack --mode production",
-    "deploy": "NODE_ENV=production gh-pages -d dist"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.10.4",
     "autoprefixer": "^9.8.4",
     "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.6.0",
     "cssnano": "^4.1.10",
     "eslint": "^7.2.0",
