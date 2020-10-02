@@ -1,7 +1,7 @@
 {
   "name": "mesto",
-  "version": "1.0.0",
-  "description": "frontend project mesto",
+  "version": "0.6.0",
+  "description": "social network mesto",
   "main": "src/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DmitryForsilov/Mesto.git"
+    "url": "git+https://github.com/DmitryForsilov/mesto.git"
   },
   "author": "Dmitry Forsilov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DmitryForsilov/Mesto/issues"
+    "url": "https://github.com/DmitryForsilov/mesto/issues"
   },
-  "homepage": "https://DmitryForsilov.github.io/Mesto",
+  "homepage": "https://DmitryForsilov.github.io/mesto",
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
