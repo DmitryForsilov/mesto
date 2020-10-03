@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const cssNano = require('cssnano');
 
 const isDevelopmentEnvironment = process.env.NODE_ENV === 'development';
 
@@ -31,7 +32,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 2, // Запуск этого лоадера после двух других
+              importLoaders: 2, // launch this loader after previous two
             },
           },
           {
@@ -46,7 +47,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: './images/[name].[ext]',
-              esModule: false, // Решение проблемы с [Object Module] вместо изображений
+              esModule: false, // Fixing bug: [Object Module] instead images
             },
           },
           {
@@ -74,7 +75,7 @@ module.exports = {
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
-      cssProcessor: require('cssnano'), // eslint-disable-line global-require
+      cssProcessor: cssNano,
       cssProcessorPluginOptions: {
         preset: ['default'],
       },
