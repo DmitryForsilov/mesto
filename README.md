@@ -1,4 +1,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/eab56ce2636f36e4438a/maintainability)](https://codeclimate.com/github/DmitryForsilov/mesto/maintainability)
+![CI](https://github.com/DmitryForsilov/mesto/workflows/CI/badge.svg)
 
 # Mesto
 
