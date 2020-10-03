@@ -4,7 +4,7 @@
   "description": "social network mesto",
   "main": "src/index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
     "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },

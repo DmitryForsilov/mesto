@@ -1,4 +1,8 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/eab56ce2636f36e4438a/maintainability)](https://codeclimate.com/github/DmitryForsilov/mesto/maintainability)
+
 # Mesto
+
+Social network.
 
 [Ссылка на проект](https://dmitryforsilov.github.io/mesto)
 
