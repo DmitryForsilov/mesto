@@ -4,7 +4,7 @@
 
 Photo social network. This app uses yandex praktikum api to set/get data.
 
-The project was reviewed by Yandex Praktikum.
+This project was reviewed by Yandex Praktikum.
 
 [Link to deployed project](https://dmitryforsilov.github.io/mesto)
 
