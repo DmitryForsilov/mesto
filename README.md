@@ -29,7 +29,7 @@ The project was reviewed by Yandex Praktikum.
 - **gh pages** - deploy
 
 ## Webpack setup:
-- Three build scripts: dev, build and deploy
+- Three build scripts: start, build and deploy
 - Babel transpilation
 - Hot reload
 - JS and CSS hashing
