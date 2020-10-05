@@ -23,6 +23,7 @@ The project was reviewed by Yandex Praktikum.
 - **CSS**
 - **Javascript**
 - **OOP**
+- **BEM**
 - **webpack**
 - **es lint**
 - **gh pages** - deploy
