@@ -1,20 +1,36 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/eab56ce2636f36e4438a/maintainability)](https://codeclimate.com/github/DmitryForsilov/mesto/maintainability)
 ![CI](https://github.com/DmitryForsilov/mesto/workflows/CI/badge.svg)
 
 # Mesto
 
-Social network.
+Photo social network. This app uses yandex praktikum api to set/get data.
 
-[Ссылка на проект](https://dmitryforsilov.github.io/mesto)
+The project was reviewed by Yandex Praktikum.
 
-## Сборка проекта реализована через Webpack.
+[Link to deployed project](https://dmitryforsilov.github.io/mesto)
 
-- Три типа сборки: dev, build и deploy.
-- JS код транспилируется через Babel.
-- Hot reload при сохранении файлов проекта.
-- Хеширование JS и CSS файлов.
-- Минификация CSS кода.
-- Автопрефиксер.
-- Оптимизация изображений.
-- Eslint для удобства разработки.
-- Деплой на gh-pages.
+## Features:
+- Form input validation
+- Rendering initial data from server
+- Editing user info
+- Adding avatar photo
+- Adding picture
+- Deleting picture
+- Opening picture-popup by click
+- Toggling like on picture
+
+## Used in project:
+- **HTML**
+- **CSS**
+- **Javascript**
+- **OOP**
+- **webpack**
+- **es lint**
+- **gh pages** - deploy
+
+## Webpack setup:
+- Three build scripts: dev, build and deploy
+- Babel transpilation
+- Hot reload
+- JS and CSS hashing
+- CSS minification
+- Autoprefixer
