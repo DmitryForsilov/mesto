@@ -15,7 +15,7 @@ This project was reviewed by Yandex Praktikum.
 - Adding avatar photo
 - Adding picture
 - Deleting picture
-- Opening picture-popup by click
+- Opening picture-in-popup by click on picture
 - Toggling like on picture
 
 ## Used in project:
